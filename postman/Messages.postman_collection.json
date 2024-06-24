@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "7e1cbc4d-5ded-4dab-a631-20a88638f71d",
+		"name": "Messages",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36432476"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"hey@ma.com\",\r\n    \"name\": \"test user\",\r\n    \"password\": \"123@46Ms\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:44359/identity/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "44359",
+					"path": [
+						"identity",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"hey@ma.com\",\r\n    \"name\": \"test user\",\r\n    \"password\": \"123@46Ms\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:44359/identity/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "44359",
+					"path": [
+						"identity",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin2@mail.com\",\r\n    \"name\": \"Admin name\",\r\n    \"password\": \"123@46Ms\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:44359/identity/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "44359",
+					"path": [
+						"identity",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users-me",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QgdXNlciIsImVtYWlsIjoiaGV5QG1hLmNvbSIsInByaW1hcnlzaWQiOiI0MzFiODI3OC1jZmE2LTRhMjAtYTU5Yy0xM2UyZGU5MzBlMTIiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MTg4OTU1NjUsImV4cCI6MTcxOTUwMDM2NSwiaWF0IjoxNzE4ODk1NTY1fQ.XDYhizH3-NeAel_Ln2rnwRfytV1OYrRpTk9-mTofSc9CqzZqa4nsZBq4cz-mg-E7g7hjhTpD9zKkg9D84G4JhkdND2E-n7pkSqkXKMCJH4iaavgVeSOeQpT-1hUPamgdgdpqC1NaSc2hHde21oT3PgOUCd1E7MHGu26fnIGQA7g2PmmSo5M9CrDdI27OFsE5AbQpML4GZ6kwXu82KBbYxdIz4sQqHC_Bpe7kaF1lkYqDkjnpcj7UemfvQFy52xmKdt_Ph3350_vRn0NmRA_Kjfy3Jr0Q6JA0m7sQJz3BghK7qpVJadicbORS1Fc2JvM5us1X6Ew6rLzwPafHpSGdMA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:44359/identity/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "44359",
+					"path": [
+						"identity",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:44397/api/identity/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"identity",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:44397/api/identity/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"identity",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-messages",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "send-message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QgdXNlciIsImVtYWlsIjoiaGV5QG1hLmNvbSIsInByaW1hcnlzaWQiOiI0MzFiODI3OC1jZmE2LTRhMjAtYTU5Yy0xM2UyZGU5MzBlMTIiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MTg4OTU1NjUsImV4cCI6MTcxOTUwMDM2NSwiaWF0IjoxNzE4ODk1NTY1fQ.XDYhizH3-NeAel_Ln2rnwRfytV1OYrRpTk9-mTofSc9CqzZqa4nsZBq4cz-mg-E7g7hjhTpD9zKkg9D84G4JhkdND2E-n7pkSqkXKMCJH4iaavgVeSOeQpT-1hUPamgdgdpqC1NaSc2hHde21oT3PgOUCd1E7MHGu26fnIGQA7g2PmmSo5M9CrDdI27OFsE5AbQpML4GZ6kwXu82KBbYxdIz4sQqHC_Bpe7kaF1lkYqDkjnpcj7UemfvQFy52xmKdt_Ph3350_vRn0NmRA_Kjfy3Jr0Q6JA0m7sQJz3BghK7qpVJadicbORS1Fc2JvM5us1X6Ew6rLzwPafHpSGdMA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FromUser\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:44326/api/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "44326",
+					"path": [
+						"api",
+						"message"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
